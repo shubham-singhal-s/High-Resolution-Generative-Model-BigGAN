@@ -35,7 +35,7 @@ BATCH_SIZE = 32
 print(f'Starting script with batch size {BATCH_SIZE}')
 base_path = "./data/"
 latent_dim = 128
-epochs = 20000
+epochs = 3100
 
 # Settings to continue training from a previous model
 offset = 0

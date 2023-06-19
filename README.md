@@ -49,3 +49,9 @@ The SLURM scripts generate two files, one for standard out (STDOUT) and one for 
 The model requires a minimum of 36 GB GPU memory, otherwise OOM (Out Of Memory) errors are thrown.
 
 If running on the WSU Wolfe server, please use the SLURM scheduling to run the model on the corresponding GPU node.
+
+**The model is scaled down to fit into the GPU memory, if you need to mimic the original BigGAN architecture, please change the `dim` variable in both generator and discriminator to `64` and the Batch Size to 256+.**
+
+**The model ideally needs more than 2000 images for training, to produce a wide variety of images.**
+
+**The current implementation converges in 3000 epochs, but if the trainig set, batch size or the architecture is altered, the time of convergeeance might change.**
